@@ -6,13 +6,12 @@ import { ThemeProviderProps } from 'next-themes/dist/types'
 import { SidebarProvider } from '@/lib/hooks/use-sidebar'
 import { TooltipProvider } from '@/components/ui/tooltip'
 
-
 export function Providers({ children, ...props }: ThemeProviderProps) {
-    return (
-        <NextThemesProvider {...props}>
-            <SidebarProvider>
-                <TooltipProvider>{children}</TooltipProvider>
-            </SidebarProvider>
-        </NextThemesProvider>
-    )
+  return (
+    <NextThemesProvider {...props}>
+      <SidebarProvider>
+        <TooltipProvider>{children}</TooltipProvider>
+      </SidebarProvider>
+    </NextThemesProvider>
+  )
 }
