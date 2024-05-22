@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
 
-module.exports = nextConfig, {
+const nextConfig = {
     env: {
         OPENAI_API_KEY: process.env.OPENAI_API_KEY,
         AUTH_SECRET: process.env.AUTH_SECRET,
@@ -11,3 +10,5 @@ module.exports = nextConfig, {
         KV_REST_API_READ_ONLY_TOKEN: process.env.KV_REST_API_READ_ONLY_TOKEN
     }
 }
+
+module.exports = nextConfig
