@@ -19,7 +19,6 @@ export interface ChatProps extends React.ComponentProps<'div'> {
   session?: Session
   missingKeys: string[]
 }
-
 export function Chat({ id, className, session, missingKeys }: ChatProps) {
   const router = useRouter()
   const path = usePathname()
