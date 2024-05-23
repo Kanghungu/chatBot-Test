@@ -149,8 +149,12 @@ export async function refreshHistory(path: string) {
 }
 
 export async function getMissingKeys() {
-  const keysRequired = ['OPENAI_API_KEY']
+  const keysRequired = ['OPENAI_API_KEY'];
   return keysRequired
-    .map(key => (process.env[key] ? '' : key))
-    .filter(key => key !== '')
+      .map(key => {
+        const envValue = process.env[key];
+        console.log(`Key: ${key}, Value: ${envValue}`);
+        return envValue ? '' : key;
+      })
+      .filter(key => key !== '');
 }
