@@ -9,5 +9,9 @@ module.exports = {
                 pathname: '**'
             }
         ]
+    },
+    env: {
+        AUTH_SECRET: process.env.AUTH_SECRET,
+        OPENAI_API_KEY: process.env.OPENAI_API_KEY
     }
 }
